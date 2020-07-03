@@ -8,6 +8,10 @@ problems. Given a set of letters, this project will identify all the words
 that can be created from them. You could, for example, cheat at Scrabble
 or unscramble a word. 
 
+##### Please note
+in the event that see some strange words being returned, there's a good chance
+that they exist in the word list.
+
 #### Sample call
 GET /api/words?from="yobt" HTTP/1.1
 Host: ...

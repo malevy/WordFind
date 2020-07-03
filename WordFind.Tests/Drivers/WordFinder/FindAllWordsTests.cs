@@ -51,6 +51,13 @@ namespace WordFind.Tests.Drivers.WordFinder
             Assert.That(foundWords, Contains.Item("toy"));
         }
 
+        [Test]
+        public void NoIncompleteWordsAreCaptured()
+        {
+            var foundWords = _finder.FindAllWords("ytob");
+            Assert.That(foundWords.Count, Is.EqualTo(2));
+        }
+
 
     }
 }

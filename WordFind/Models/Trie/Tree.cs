@@ -42,15 +42,5 @@ namespace WordFind.Models.Trie
 
         public Node Get(char value) => root.Get(value);
 
-        public static Tree From(IWordListSource source)
-        {
-            var tree = new Tree();
-            foreach (var word in source.Words())
-            {
-                tree.Insert(word);
-            }
-
-            return tree;
-        }
     }
 }

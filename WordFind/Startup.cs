@@ -34,7 +34,7 @@ namespace WordFind
             {
                 var wordSource = new EmbeddedWordListSource();
                 wordSource.Load();
-                return Tree.From(wordSource);
+                return TrieTreeFactory.From(wordSource);
             });
 
             services.AddTransient<WordFinder>();
