@@ -6,18 +6,17 @@ namespace WordFind.Tests.Drivers.WordFinder
     [TestFixture]
     public class FindAllWordsTests
     {
-        private readonly Tree _tree;
         private readonly WordFind.Drivers.WordFinder _finder;
 
 
         public FindAllWordsTests()
         {
-            _tree = new Tree();
-            _tree.Insert("boy");
-            _tree.Insert("toy");
-            _tree.Insert("goat");
+            var tree = new Tree();
+            tree.Insert("boy");
+            tree.Insert("toy");
+            tree.Insert("goat");
 
-            _finder = new WordFind.Drivers.WordFinder(_tree);
+            _finder = new WordFind.Drivers.WordFinder(tree);
         }
 
         [Test]
